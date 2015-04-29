@@ -1,16 +1,1 @@
-
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [125.6, 10.1]
-      },
-      "properties": {
-        "name": "Dinagat Islands"
-      }
-    }
-  ]
-}
+{"type": "FeatureCollection", "features": [{"geometry": {"type": "Point", "coordinates": [125.6, 10.1]}, "type": "Feature", "properties": {"name": "Dinagat Islands"}}, {"geometry": {"type": "Point", "coordinates": [-82.157629, 33.58067]}, "type": "Feature", "id": null, "properties": {"tweet": "So winter @ no dogs were harmed https://t.co/brB5PquHVf"}}, {"geometry": {"type": "Point", "coordinates": [-113.499757, 53.539254]}, "type": "Feature", "id": null, "properties": {"tweet": "Mild, dry winter could mean misery for spring allergy sufferers: Allergy specialist Dr. Joel Doctor says southern\u2026 http://t.co/WLfi9QvdJs"}}, {"geometry": {"type": "Point", "coordinates": [-71.306223, 42.812684]}, "type": "Feature", "id": null, "properties": {"tweet": "Happy Birthday Souc, hopefully this winter I'll be back playing alongside you just like we have since\u2026 https://t.co/ufk8Dm9XFg"}}, {"geometry": {"type": "Point", "coordinates": [-121.351449, 38.606221]}, "type": "Feature", "id": null, "properties": {"tweet": "If you need me, I'll just be here until winter. \ud83c\udf34 #hammocklyfe #bestpurchaseiveevermade @ My\u2026 https://t.co/xd8F0a6829"}}, {"geometry": {"type": "Point", "coordinates": [-88.785569, 41.935106]}, "type": "Feature", "id": null, "properties": {"tweet": "Possibly a venue for winter? ;) \ud83d\ude1c\ud83c\udf89 #nightlifeparadise #NLP #2AM #VLoCiTii #NIU #convocationcenter\u2026 https://t.co/YYhsnUBsoD"}}, {"geometry": {"type": "Point", "coordinates": [-86.654802, 46.411518]}, "type": "Feature", "id": null, "properties": {"tweet": "Exploring the end of #winter at #PicturedRocks #NationalLakeshore with the boss PK\n\n#biztrip #work\u2026 https://t.co/dZ3MqBmQ8K"}}, {"geometry": {"type": "Point", "coordinates": [-97.403441, 32.314648]}, "type": "Feature", "id": null, "properties": {"tweet": "I went to Zach's farm and freezed my butt off to say the least\u2744\ufe0f Why did winter decide to come back?? #50degrees #toocoldforspring"}}, {"geometry": {"type": "Point", "coordinates": [-75.677362, 44.613735]}, "type": "Feature", "id": null, "properties": {"tweet": "I miss winter"}}]}

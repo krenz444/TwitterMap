@@ -1,16 +1,1 @@
-
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [125.6, 10.1]
-      },
-      "properties": {
-        "name": "Dinagat Islands"
-      }
-    }
-  ]
-}
+{"type": "FeatureCollection", "features": [{"geometry": {"type": "Point", "coordinates": [125.6, 10.1]}, "type": "Feature", "properties": {"name": "Dinagat Islands"}}, {"geometry": {"type": "Point", "coordinates": [3.343642, 7.123942]}, "type": "Feature", "id": null, "properties": {"tweet": "\"@MobilePunch: Military rescues 293 girls, women from Sambisa Forest http://t.co/wQunus4Kss\"\n\n#Hmmmm. Nigeria, I hail thee..."}}, {"geometry": {"type": "Point", "coordinates": [-73.96334, 40.716791]}, "type": "Feature", "id": null, "properties": {"tweet": "All hail, it's balcony and rose season. @ North Williamsburg - North Side - Brooklyn, New York, NY, US https://t.co/OztLmAsy8K"}}, {"geometry": {"type": "Point", "coordinates": [-95.132562, 29.387499]}, "type": "Feature", "id": null, "properties": {"tweet": "\u201c@UberFacts: Adolf Hitler had a framed photograph of Henry Ford on his office wall.\u201d All hail ford"}}, {"geometry": {"type": "Point", "coordinates": [-0.015049, 51.751127]}, "type": "Feature", "id": null, "properties": {"tweet": "Sheen ln couple at bus stop hail me &amp; off to Putney Heath cos uberat can't  find em tell about dark web &amp; complaints now gonna try Maaxi/GT"}}]}

@@ -1,16 +1,1 @@
-
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [125.6, 10.1]
-      },
-      "properties": {
-        "name": "Dinagat Islands"
-      }
-    }
-  ]
-}
+{"type": "FeatureCollection", "features": [{"geometry": {"type": "Point", "coordinates": [125.6, 10.1]}, "type": "Feature", "properties": {"name": "Dinagat Islands"}}, {"geometry": {"type": "Point", "coordinates": [-73.987985, 40.749338]}, "type": "Feature", "id": null, "properties": {"tweet": "#nofilter #beautiful #EmpireStateBuilding #Airplanepassingthru #moon #cloudy #pleasantweather\u2026 https://t.co/7aTCmuAOCs"}}, {"geometry": {"type": "Point", "coordinates": [125.617311, 7.134246]}, "type": "Feature", "id": null, "properties": {"tweet": "Partly cloudy with 28\u00b0"}}]}

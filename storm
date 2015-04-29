@@ -1,16 +1,1 @@
-
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [125.6, 10.1]
-      },
-      "properties": {
-        "name": "Dinagat Islands"
-      }
-    }
-  ]
-}
+{"type": "FeatureCollection", "features": [{"geometry": {"type": "Point", "coordinates": [125.6, 10.1]}, "type": "Feature", "properties": {"name": "Dinagat Islands"}}, {"geometry": {"type": "Point", "coordinates": [-84.969214, 34.477237]}, "type": "Feature", "id": null, "properties": {"tweet": "I was chilling with all stars!!\ud83d\ude08\ud83d\ude08\ud83d\udd25\ud83d\ude02 @ old storm days https://t.co/yjdyYSEMeP"}}, {"geometry": {"type": "Point", "coordinates": [-78.6203, 38.4083]}, "type": "Feature", "id": null, "properties": {"tweet": "first #lightning capture this year ... tripod on the roof - #storm #weather #vscocam #mastinlabs\u2026 https://t.co/SBBTXPGFfs"}}, {"geometry": {"type": "Point", "coordinates": [-94.987153, 35.908268]}, "type": "Feature", "id": null, "properties": {"tweet": "~She stood in the storm, and when the wind did not blow her way, she adjusted her sails~ \n-Elizabeth Edwards http://t.co/ZcOcb5Qnvw"}}, {"geometry": {"type": "Point", "coordinates": [-96.858378, 32.473305]}, "type": "Feature", "id": null, "properties": {"tweet": "Before the storm last weekend\ud83d\ude31 http://t.co/QrULDQUscm"}}, {"geometry": {"type": "Point", "coordinates": [-70.073993, -38.890186]}, "type": "Feature", "id": null, "properties": {"tweet": "\"@AvrilLavigne: \u201c@FUNNYAvril: @AvrilLavigne there's always a rainbow after the storm \ud83d\udc96\u201d love that !!! \ud83c\udf08\""}}, {"geometry": {"type": "Point", "coordinates": [113.934558, -2.209445]}, "type": "Feature", "id": null, "properties": {"tweet": "#Repost @diannaalizz with repostapp.\u2070\u30fb\u30fb\u30fb\u2070No matter what storm comes at you, be joyful and hopeful. No\u2026 https://t.co/9LAhSmqCSF"}}, {"geometry": {"type": "Point", "coordinates": [-58.395821, -34.609517]}, "type": "Feature", "id": null, "properties": {"tweet": "@Misantrola igual jonny storm es alto bebo"}}]}

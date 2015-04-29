@@ -66,6 +66,8 @@ class StdOutListener(StreamListener):
             if keyword in tweet_text:
                 self.modify_file(keyword, coordinates, tweet_text)
 
+        print coordinates, tweet_text
+
         return True
 
     def on_error(self, status):
@@ -77,16 +79,17 @@ class StdOutListener(StreamListener):
 
             json_file = None
 
-            with open('/home/erkrenz/twitter/' + str(file_name), 'r') as file:
+            #Read in the current GeoJSON File
+            with open('/home/erkrenz/TwitterMap/' + str(file_name), 'r') as file:
 
                 json_file = json.load(file)
 
                 json_file["features"].append(geojson.Feature(geometry=geojson.Point(coordinates), properties={"tweet": tweet_text}))
 
-                print json_file
+                #print json_file
 
-
-            with open('/home/erkrenz/twitter/' + str(file_name), 'w') as file:
+            #Print out the new GeoJSON File
+            with open('/home/erkrenz/TwitterMap/' + str(file_name), 'w') as file:
                 json.dump(json_file, file)
 
         except Exception as e:

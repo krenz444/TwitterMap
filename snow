@@ -1,16 +1,1 @@
-
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [125.6, 10.1]
-      },
-      "properties": {
-        "name": "Dinagat Islands"
-      }
-    }
-  ]
-}
+{"type": "FeatureCollection", "features": [{"geometry": {"type": "Point", "coordinates": [125.6, 10.1]}, "type": "Feature", "properties": {"name": "Dinagat Islands"}}, {"geometry": {"type": "Point", "coordinates": [-119.995615, 39.477825]}, "type": "Feature", "id": null, "properties": {"tweet": "Beautiful scenery, but not much snow in the Sierras \ud83c\uddfa\ud83c\uddf8\ud83d\ude0e #DonnerPass #California #Nevada #Reno @\u2026 https://t.co/sQhcUcUa5M"}}, {"geometry": {"type": "Point", "coordinates": [-91.22235, 30.457193]}, "type": "Feature", "id": null, "properties": {"tweet": "@WycheBa @palatineleefan @LeeDeWyze.  omigosh, no snow, flood, rockslide or missile landing please"}}, {"geometry": {"type": "Point", "coordinates": [-117.882803, 33.899215]}, "type": "Feature", "id": null, "properties": {"tweet": "Up to snow good \u2744\ufe0f\u26c4\ufe0f"}}, {"geometry": {"type": "Point", "coordinates": [-107.878121, 37.272547]}, "type": "Feature", "id": null, "properties": {"tweet": "We got 10\" of snow yesterday. Is it November yet? #PowerOfThePass http://t.co/uv9XYnmqEq"}}, {"geometry": {"type": "Point", "coordinates": [-147.457978, 61.818871]}, "type": "Feature", "id": null, "properties": {"tweet": "With so many blank canvases, I had to leave my signature. Photo: @recollectt #ski #snow #skiing\u2026 https://t.co/qBMsfHvkBm"}}]}
