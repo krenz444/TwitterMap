@@ -1,16 +1,1 @@
-
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [125.6, 10.1]
-      },
-      "properties": {
-        "name": "Dinagat Islands"
-      }
-    }
-  ]
-}
+{"type": "FeatureCollection", "features": [{"geometry": {"type": "Point", "coordinates": [125.6, 10.1]}, "type": "Feature", "properties": {"name": "Dinagat Islands"}}, {"geometry": {"type": "Point", "coordinates": [-60.21499, -33.332384]}, "type": "Feature", "id": null, "properties": {"tweet": "Puedo volver? \ud83d\udc59\ud83c\udfca @ Disney's typhoon lagoon https://t.co/xUJ2mP93g3"}}, {"geometry": {"type": "Point", "coordinates": [-60.21499, -33.332384]}, "type": "Feature", "id": null, "properties": {"tweet": "Puedo volver? \ud83d\udc59\ud83c\udfca @ Disney's typhoon lagoon https://t.co/xUJ2mP93g3"}}]}

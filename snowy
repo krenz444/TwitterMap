@@ -1,16 +1,1 @@
-
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [125.6, 10.1]
-      },
-      "properties": {
-        "name": "Dinagat Islands"
-      }
-    }
-  ]
-}
+{"type": "FeatureCollection", "features": [{"geometry": {"type": "Point", "coordinates": [125.6, 10.1]}, "type": "Feature", "properties": {"name": "Dinagat Islands"}}, {"geometry": {"type": "Point", "coordinates": [74.926226, 33.617143]}, "type": "Feature", "id": null, "properties": {"tweet": "A snowy owl appears to fight against the elements during extreme weather conditions near Quebec City, Canada http://t.co/bQoQF83GGz\""}}]}
