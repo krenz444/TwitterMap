@@ -51,8 +51,10 @@ class StdOutListener(StreamListener):
         #If the file does not contain coordinates, it is not relevant, skip and move on
         try:
             if json_data["coordinates"] == None:
+                #print "no coordinates on", json_data["text"]
                 return True
         except:
+            #print "no coordinates on", json_data["text"]
             return True
 
         #Fetch coordinates from data
@@ -66,7 +68,7 @@ class StdOutListener(StreamListener):
             if keyword in tweet_text:
                 self.modify_file(keyword, coordinates, tweet_text)
 
-        print coordinates, tweet_text
+        print coordinates, tweet_text, json_data["user"]["screen_name"]
 
         return True
 

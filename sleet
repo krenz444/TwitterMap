@@ -1,16 +1,1 @@
-
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [125.6, 10.1]
-      },
-      "properties": {
-        "name": "Dinagat Islands"
-      }
-    }
-  ]
-}
+{"type": "FeatureCollection", "features": [{"geometry": {"type": "Point", "coordinates": [125.6, 10.1]}, "type": "Feature", "properties": {"name": "Dinagat Islands"}}, {"geometry": {"type": "Point", "coordinates": [-2.293672, 53.605217]}, "type": "Feature", "id": null, "properties": {"tweet": "@joannakent me too I was potting on in ghse yesterday it hailstone rain bit sleet and sunny"}}]}
