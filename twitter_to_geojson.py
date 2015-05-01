@@ -6,10 +6,13 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 import json
 import geojson
+import os
 from pprint import pprint
 import sys
 import MySQLdb
 import uuid
+from datetime import datetime, tzinfo, timedelta
+from dateutil import parser
 
 #Variables that contains the user credentials to access Twitter API
 access_token = "2260829143-4hASsCa1kdKsVxqThkByldtxyfjcNtrCJmsafLe"
@@ -35,10 +38,8 @@ keywords = [
     'monsoon',
     'sunny',
     'snowy',
-    'sunny',
     'earthquake'
     ]
-
 
 #This is a basic listener that just prints received tweets to stdout.
 class StdOutListener(StreamListener):
@@ -63,39 +64,102 @@ class StdOutListener(StreamListener):
         #Fetch tweet text from data
         tweet_text = json_data["text"]
 
+        #date created
+        created_at = json_data["created_at"]
+
+        #username
+        user = json_data["user"]["screen_name"]
+        date_object = parser.parse(created_at)#, '%a %b %d %X %Y')
+
+
         #Change our respective file to contain this value
         for keyword in keywords:
             if keyword in tweet_text:
-                self.modify_file(keyword, coordinates, tweet_text)
+                self.modify_file(keyword, coordinates, tweet_text, date_object, user)
 
-        print coordinates, tweet_text, json_data["user"]["screen_name"]
+        #Purge records older than 4 hours
+        for keyword in keywords:
+            self.purge_old_tweets(keyword)
 
+        #print date_object
+            
         return True
 
     def on_error(self, status):
         print status
 
-    def modify_file(self, file_name, coordinates, tweet_text):
+    def purge_old_tweets(self, file_name):
+        #Read in the current GeoJSON File
+        file_path = 'json_data/' + str(file_name)
 
+        json_file = None
+        
         try:
+            with open(file_path, 'r') as file:
+    
+                json_file = json.load(file)
+    
+                #print len(json_file["features"])
+    
+                #append to the existing featurecollection
+                for feature in json_file["features"]:
+                    time_then =  parser.parse(feature["properties"]["time"]).replace(tzinfo=None)
+                    time_now =  datetime.utcnow()
+                    time_delta = time_then - time_now
+                    if time_delta > timedelta(hours=4):
+                        print "old tweet purged from", file_name
+                        json_file["features"].remove(feature)
+                        
+                #print len(json_file["features"])        
+                    
+                    
+            with open(file_path, 'w') as file:
+                
+                geojson.dump(json_file, file)
+                
+        except Exception as e:
+            print "Error on purge", e
 
-            json_file = None
 
-            #Read in the current GeoJSON File
-            with open('/home/erkrenz/TwitterMap/' + str(file_name), 'r') as file:
+    def modify_file(self, file_name, coordinates, tweet_text, date_object, user):
+
+
+            
+        file_path = 'json_data/' + str(file_name)
+        json_file = None
+
+        feature = geojson.Feature(geometry=geojson.Point(coordinates),
+          properties={
+              "tweet": tweet_text,
+              "user": user,
+              "time": str(date_object)
+            }
+          )
+
+
+        #Read in the current GeoJSON File
+        try:
+            with open(file_path, 'r') as file:
 
                 json_file = json.load(file)
 
-                json_file["features"].append(geojson.Feature(geometry=geojson.Point(coordinates), properties={"tweet": tweet_text}))
+                #append to the existing featurecollection
+                json_file["features"].append(feature)
 
-                #print json_file
+        #Create it, and a Feature Collection if it does not exist
+        except (IOError):
+            with open(file_path, 'w') as file:
 
-            #Print out the new GeoJSON File
-            with open('/home/erkrenz/TwitterMap/' + str(file_name), 'w') as file:
-                json.dump(json_file, file)
+                feature_collection = geojson.FeatureCollection([feature])
 
-        except Exception as e:
-            print "Error on file modification", str(e)
+                json.dump(feature_collection, file)
+
+                json_file = feature_collection
+
+        #Print out the new GeoJSON File
+        with open(file_path, 'w') as file:
+            geojson.dump(json_file, file)
+
 
 
 if __name__ == '__main__':
@@ -105,8 +169,6 @@ if __name__ == '__main__':
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     stream = Stream(auth, l)
-
-
 
     #This line filter Twitter Streams to capture data by the keywords
     stream.filter(track=keywords)
