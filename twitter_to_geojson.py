@@ -81,7 +81,7 @@ class StdOutListener(StreamListener):
         for keyword in keywords:
             self.purge_old_tweets(keyword)
 
-        #print date_object
+        print user, coordinates, tweet_text
             
         return True
 
@@ -118,7 +118,8 @@ class StdOutListener(StreamListener):
                 geojson.dump(json_file, file)
                 
         except Exception as e:
-            print "Error on purge", e
+            pass
+            #print "Error on purge", e
 
 
     def modify_file(self, file_name, coordinates, tweet_text, date_object, user):
